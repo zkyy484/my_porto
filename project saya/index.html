@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abi · Web Developer & Educator · Portfolio Lengkap</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/my.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header>
+            <div style="display: flex; align-items: center;">
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                <div class="logo">Moch. Dzaky Musyaddad</div>
+            </div>
+            <div class="header-right">
+                <nav class="nav-links" id="navLinks">
+                    <a href="#beranda">Beranda</a>
+                    <a href="#tentang">Tentang Saya</a>
+                    <a href="#skill">Skill</a>
+                    <a href="#project">Project</a>
+                    <a href="#kontak">Kontak</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+            </div>
+        </header>
+    </div>
+
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="hero" id="beranda">
+            <div class="hero-text">
+                <div class="greeting">Halo, saya Dzaky</div>
+                <h1><span>Web Developer </span>& Desainer</h1>
+                <div class="description">
+                    Saya fokus mengembangkan website yang tidak hanya berjalan optimal, tetapi juga hadir dengan desain yang menarik, intuitif, dan nyaman digunakan.
+                </div>
+                <div class="button-group">
+                    <a href="#project" class="btn btn-primary">Lihat Proyek <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-photo">
+                    <img src="asset/profile/1223.jpeg" alt="Profile Photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-user\'></i><span>Abi</span></div>';">
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="about-section" id="tentang">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Halo! Saya <span class="highlight">Moch. Dzaky Musyaddad </span>biasa dipanggil <span class="highlight">Dzaky. </span>Saat ini saya sedang menempuh studi di Politeknik Negeri Banyuwangi, Jurusan Bisnis dan Informatika, Program Studi Teknik Rekayasa Perangkat Lunak.</p>
+                    <p>Ketertarikan saya pada dunia pemrograman dimulai sejak masa kuliah, khususnya dalam <span class="highlight">pengembangan website. </span> Sejak saat itu, saya terus belajar dan mengembangkan kemampuan di bidang <span class="highlight">web development.</span></p>
+                    <p>Saat ini, saya fokus mengembangkan aplikasi web modern dengan memanfaatkan berbagai teknologi seperti <span class="highlight">Laravel, JavaScript, serta pengelolaan database. </span>Saya senang membangun website yang tidak hanya berfungsi dengan baik, tetapi juga memiliki desain yang menarik, responsif, dan nyaman digunakan.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fas fa-code"></i><h3>Frontend Dev</h3><p>HTML, CSS, JavaScript, React, Vue, Tailwind</p></div>
+                    <div class="skill-item"><i class="fas fa-server"></i><h3>Backend Dev</h3><p>PHP, Laravel, MySQL, REST API</p></div>
+                    <div class="skill-item"><i class="fas fa-layer-group"></i><h3>Full Stack Dev</h3><p>Frontend, Backend Development, Database Integration</p></div>
+                    <div class="skill-item"><i class="fas fa-tools"></i><h3>Tools & Others</h3><p>Git, Canva, Figma, Visual Stuido Code</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Carousel -->
+        <section class="skill-carousel-section" id="skill">
+            <h2 class="section-title">My Skill</h2>
+            <div class="carousel-wrapper">
+                <div class="circle-section">
+                    <div class="circle-container">
+                        <div class="main-circle" id="mainCircle">
+                            <div class="circle-content" id="circleContent"></div>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <div class="nav-btn" id="prevBtn">←</div>
+                        <div class="nav-btn" id="nextBtn">→</div>
+                    </div>
+                </div>
+                <div class="detail-section" id="detailSection">
+                    <div class="detail-label">CURRENT SKILL</div>
+                    <div class="detail-title" id="detailTitle"></div>
+                    <div class="detail-description" id="detailDesc"></div>
+                    <div class="detail-meta" id="detailMeta"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="project">
+            <h2 class="section-title">Projects</h2>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="asset/project/p1.png" alt="Project 1">
+                        <div class="project-overlay"><div class="project-links"><a href="asset/project/p1.png" class="project-link"><i class="fas fa-external-link-alt"></i></a></div></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Web Development</div>
+                        <h3 class="project-title">Platform Pemesanan Desain Arsitektur Rumah</h3>
+                        <p class="project-description">Platform berbasis web yang dikembangkan bekerja sama dengan <a href="https://nazarch-studio.my.id/" class="situs">Nazarch Studio</a>, berfungsi sebagai sistem pemesanan desain arsitektur rumah secara online. Platform ini dilengkapi dengan fitur pemesanan desain, payment gateway, serta fitur chat untuk memudahkan komunikasi antara klien dan pihak studio.</p>
+                        <div class="project-tech"><span class="tech-tag">Laravel</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Node.js</span><span class="tech-tag">MySQL</span></div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <!-- <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 2">
+                        <div class="project-overlay"><div class="project-links"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a></div></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Mobile Apps</div>
+                        <h3 class="project-title">Fitness Tracker App</h3>
+                        <p class="project-description">Aplikasi fitness dengan workout planner dan progress monitoring.</p>
+                        <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Firebase</span><span class="tech-tag">Provider</span></div>
+                    </div>
+                </div> -->
+                <!-- Project 3 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="asset/project/p2.png" alt="Project 3">
+                        <div class="project-overlay"><div class="project-links"><a href="asset/project/p2.png" class="project-link"><i class="fas fa-external-link-alt"></i></a></div></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">UI/UX Design</div>
+                        <h3 class="project-title">MR Clean – Laundry Startup Branding</h3>
+                        <p class="project-description">MR Clean merupakan proyek perancangan desain startup yang berfokus pada bisnis laundry di wilayah sekitar. Proyek ini mencakup perancangan konsep visual dan identitas brand untuk mendukung kebutuhan promosi dan pengembangan usaha laundry lokal.</p>
+                        <div class="project-tech"><span class="tech-tag">Figma</span><span class="tech-tag">Brand Identity</span><span class="tech-tag">Logo Design</span><span class="tech-tag">Visual Concept</span><span class="tech-tag">Promotional Media</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="asset/project/p3.png" alt="Project 3">
+                        <div class="project-overlay"><div class="project-links"><a href="asset/project/p3.png" class="project-link"><i class="fas fa-external-link-alt"></i></a></div></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">UI/UX Design</div>
+                        <h3 class="project-title">Classy Cooking – Platform Resep Makanan & Minuman</h3>
+                        <p class="project-description">Classy Cooking merupakan proyek perancangan desain platform resep makanan dan minuman yang menyajikan informasi resep secara jelas, menarik, dan mudah dipahami.
+                            Platform ini juga menampilkan profil peracik bumbu atau kreator resep agar lebih dikenal, dengan fokus pada tata letak yang bersih, hierarki informasi yang rapi, dan pengalaman pengguna yang nyaman.</p>
+                        <div class="project-tech"><span class="tech-tag">Figma</span><span class="tech-tag">Layout & Typography</span><span class="tech-tag">User Experience</span><span class="tech-tag">Visual Content</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="kontak">
+            <div class="contact-container">
+                <h1 style="color: var(--text-primary);">Mari Terhubung</h1>
+                <p class="subtitle">Pilih cara termudah untuk menghubungi saya</p>
+                <div class="contact-wrapper">
+                    <div class="info-items-row">
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                            <div class="info-text"><h3>Telepon</h3><p>+62 831 2208 5284</p></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div class="info-text"><h3>Email</h3><a href="mailto:halo@namakamu.com">dzakymusyaddad@gmail.com</a></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text"><h3>Lokasi</h3><p>Dusun Krajan, RT002/RW020, Tembokrejo, Muncar, Banyuwangi, Jawa Timur, Indonesia</p></div>
+                        </div>
+                    </div>
+                    <div class="vertical-divider"></div>
+                    <div class="social-section">
+                        <div class="social-title">Ikuti Saya</div>
+                        <div class="social-links-row">
+                            <a href="https://github.com/zkyy484" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="http://www.linkedin.com/in/moch-dzaky-musyaddad-42a278326" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/_4z1ky/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/yukana_484" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-footer-dots">
+                    <i class="fas fa-circle"></i> <i class="fas fa-circle"></i> <i class="fas fa-circle"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer-note">
+            Dzaky · Modern front-end · ESL
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            // Dark mode toggle
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const body = document.body;
+            const storedTheme = localStorage.getItem('theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (storedTheme === 'dark' || (!storedTheme && systemDark)) {
+                body.classList.add('dark');
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+            toggle.addEventListener('click', () => {
+                if (body.classList.contains('dark')) {
+                    body.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    icon.className = 'fas fa-moon';
+                } else {
+                    body.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    icon.className = 'fas fa-sun';
+                }
+            });
+
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            mobileBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileBtn.querySelector('i');
+                icon.className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            });
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+
+            // Skill Carousel
+            const skills = [
+                { title: "FRONTEND DEV", shortTitle: "FRONTEND", description: "Mampu membangun tampilan website yang responsif dan modern menggunakan HTML, CSS, Bootstrap, JavaScript, serta framework seperti React, Vue, dan Tailwind CSS.", meta: ["HTML", "CSS", "Javascript", "Framework"] },
+                { title: "BACKEND DEV", shortTitle: "BACKEND", description: "Berpengalaman dalam mengembangkan sistem backend menggunakan PHP dan Laravel, termasuk pengelolaan database MySQL serta pembuatan dan konsumsi REST API.", meta: ["PHP", "MySQL", "Laravel"] },
+                { title: "UI DEV", shortTitle: "UI", description: "Memiliki kemampuan dalam merancang antarmuka pengguna yang bersih dan intuitif, meliputi layout, pemilihan warna, tipografi, serta penerapan desain responsif untuk meningkatkan pengalaman pengguna.", meta: ["Layout", "Color", "Typography", "Design Responsive"] },
+                { title: "GIT FUNDAMENTAL", shortTitle: "GIT", description: "Memahami penggunaan Git untuk version control, termasuk pengelolaan repository, branching dasar, commit, dan kolaborasi menggunakan GitHub.", meta: ["Version control", "Branching Dasar", "Team Colaboration"] },
+                { title: "TEAMWORK COMUNICATION", shortTitle: "COMUNICATION", description: "Mampu berkomunikasi dengan baik dalam tim maupun individu, baik secara lisan maupun tulisan, untuk menyampaikan ide, kebutuhan sistem, dan solusi teknis secara jelas dan efektif.", meta: ["Penyampaian ide", "Discussion", "Teamwork"] },
+            ];
+            let currentIndex = 0;
+            const circleContent = document.getElementById('circleContent');
+            const detailTitle = document.getElementById('detailTitle');
+            const detailDesc = document.getElementById('detailDesc');
+            const detailMeta = document.getElementById('detailMeta');
+            const mainCircle = document.getElementById('mainCircle');
+            function updateDisplay(index) {
+                const skill = skills[index];
+                circleContent.innerHTML = `${skill.shortTitle}<span>${skill.title.split(' ')[0]}</span>`;
+                const detailSection = document.getElementById('detailSection');
+                detailSection.style.opacity = '0.3';
+                setTimeout(() => {
+                    detailTitle.textContent = skill.title;
+                    detailDesc.textContent = skill.description;
+                    let metaHtml = '';
+                    skill.meta.forEach(tag => { metaHtml += `<span class="meta-item">${tag}</span>`; });
+                    detailMeta.innerHTML = metaHtml;
+                    detailSection.style.opacity = '1';
+                    detailSection.classList.add('fade-in');
+                    setTimeout(() => detailSection.classList.remove('fade-in'), 400);
+                }, 150);
+                mainCircle.style.transform = 'scale(0.95)';
+                setTimeout(() => mainCircle.style.transform = 'scale(1)', 200);
+            }
+            document.getElementById('prevBtn')?.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + skills.length) % skills.length;
+                updateDisplay(currentIndex);
+            });
+            document.getElementById('nextBtn')?.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % skills.length;
+                updateDisplay(currentIndex);
+            });
+            if (circleContent) updateDisplay(0);
+
+            // Project filter
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            function filterProjects(category) {
+                projectCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'all' || cardCategory === category) {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
+                    } else {
+                        card.classList.add('hide');
+                        card.classList.remove('show');
+                    }
+                });
+            }
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProjects(this.getAttribute('data-filter'));
+                });
+            });
+
+            // Efek hover untuk gambar profile sudah di CSS, tapi kita pastikan
+            const profilePhoto = document.querySelector('.profile-photo');
+            if (profilePhoto) {
+                profilePhoto.addEventListener('mouseenter', () => {
+                    profilePhoto.style.transition = 'all 0.3s ease';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
